@@ -1,5 +1,5 @@
-const officegen = require('officegen');
-const fs = require('fs');
+import officegen from 'officegen';
+import fs from 'fs';
 
 const createWordDocument = (cardData) => {
   let docx = officegen({
@@ -31,6 +31,4 @@ const createWordDocument = (cardData) => {
   docx.generate(out);
 };
 
-module.exports = {
-  createWordDocument
-};
+export { createWordDocument };
