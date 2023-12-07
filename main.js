@@ -1,4 +1,4 @@
-const trelloPowerUp = require('trello-power-up');
+import { initialize } from 'trello-power-up';
 
 const POWER_UP_NAME = 'Exportação de Conteúdo Nextmark';
 
@@ -8,7 +8,7 @@ const exportListCallback = (trello) => {
   // Chamar a função de exportação (PDF ou Word)
 };
 
-trelloPowerUp.initialize({
+initialize({
   'board-buttons': function(t, options) {
     return [{
       icon: 'https://your-icon-url.com/icon.png',
