@@ -1,7 +1,6 @@
-const { getCardsOnList } = require('./trello-api.js');
-const wordGenerator = require('./exporters/word-generator.js');
-// Supondo que o pdf-generator.js também esteja atualizado
-const pdfGenerator = require('./pdf-generator.js');
+import { getCardsOnList } from './trello-api.js';
+import { createPDF } from './pdf-generator.js';
+import { createWordDocument } from './exporters/word-generator.js';
 
 const exportList = (listId, format) => {
   getCardsOnList(listId)
@@ -9,9 +8,9 @@ const exportList = (listId, format) => {
       const cardData = cards.map(card => ({ title: card.name, description: card.desc }));
 
       if (format === 'pdf') {
-        pdfGenerator.createPDF(cardData);
+        createPDF(cardData);
       } else if (format === 'word') {
-        wordGenerator.createWordDocument(cardData);
+        createWordDocument(cardData);
       } else {
         console.error('Formato não suportado:', format);
       }
@@ -19,6 +18,4 @@ const exportList = (listId, format) => {
     .catch(error => console.error('Erro ao exportar lista:', error));
 };
 
-module.exports = {
-  exportList
-};
+export { exportList };
