@@ -1,8 +1,8 @@
-const trello = window.TrelloPowerUp.iframe();
+import { iframe, modal } from 'trello-power-up';
 
 // Função para abrir o modal de seleção de lista e formato de exportação
 const openExportModal = () => {
-  trello.modal({
+  modal({
     // O título do modal
     title: 'Exportar Lista',
     // URL do conteúdo do modal, pode ser um arquivo HTML ou uma rota em seu servidor
@@ -15,6 +15,4 @@ const openExportModal = () => {
 
 // Adicione mais lógica aqui conforme necessário
 
-module.exports = {
-  openExportModal
-};
+export { openExportModal };
