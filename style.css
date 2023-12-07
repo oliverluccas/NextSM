@@ -1,0 +1,47 @@
+/* Estilos básicos para o Power-Up */
+.power-up-container {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+}
+
+/* Estilos para modais */
+.modal {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.modal-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-body {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.modal-footer {
+    text-align: right;
+}
+
+/* Estilos para botões */
+.button {
+    background-color: #0079BF;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #005a9c;
+}

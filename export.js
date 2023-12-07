@@ -1,5 +1,5 @@
 const { getCardsOnList } = require('./trello-api.js');
-const wordGenerator = require('./exporters/word-generator.js');
+const wordGenerator = require('./word-generator.js');
 // Supondo que o pdf-generator.js também esteja atualizado
 const pdfGenerator = require('./pdf-generator.js');
 
