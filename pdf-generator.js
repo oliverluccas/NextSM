@@ -1,5 +1,5 @@
-const PDFDocument = require('pdfkit');
-const fs = require('fs');
+import { PDFDocument } from 'pdfkit';
+import fs from 'fs';
 
 const createPDF = (cardData) => {
   const doc = new PDFDocument;
@@ -17,6 +17,4 @@ const createPDF = (cardData) => {
   doc.end();
 };
 
-module.exports = {
-  createPDF
-};
+export { createPDF };
