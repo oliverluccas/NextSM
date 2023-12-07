@@ -1,0 +1,7 @@
+{
+    "exportOptions": {
+      "defaultFormat": "pdf",
+      "allowedFormats": ["pdf", "word"]
+    }
+  }
+  
